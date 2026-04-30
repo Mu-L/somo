@@ -84,7 +84,9 @@ fn get_processes() -> HashMap<u64, Stat> {
 
     let mut map: HashMap<u64, Stat> = HashMap::new();
     for p in all_procs {
-        let process = p.unwrap();
+        let Ok(process) = p else {
+            continue;
+        };
 
         if let (Ok(stat), Ok(fds)) = (process.stat(), process.fd()) {
             for fd in fds {
