@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.3] - 30.04.2026
+- **fix** race condition in linux process enumeration, by @Jeidnx
+- **fix** sort by remote_address on macOS, by @aychun
+- **remove** nix run CI workflow job, by @theopfr
+- **bump** dependencies, by @dependabot
+
+---
+
 ## [1.3.2] - 12.03.2026
 - **bump** dependencies, by @dependabot
 
